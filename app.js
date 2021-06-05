@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
+app.get('/get_pulsar', (req, res) => {
     const scrapper = require('./index');
     res.sendStatus(200);
 })
