@@ -1,6 +1,5 @@
 // pl-scraper.js
 
-require('dotenv').config();
 const puppeteer = require('puppeteer');
 const sgMail = require('@sendgrid/mail');
 
