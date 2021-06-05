@@ -5,7 +5,11 @@ const sgMail = require('@sendgrid/mail');
 
 let pulsarTD = new Promise(async (resolve, reject) => {
     const browser = await puppeteer.launch({
-        headless: true
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+          ]        
     });
     // scraping logic comes here…
     const page = await browser.newPage();
@@ -44,7 +48,11 @@ let pulsarTD = new Promise(async (resolve, reject) => {
 
 let pulsarSD = new Promise(async (resolve, reject) => {
     const browser = await puppeteer.launch({
-        headless: true
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+          ]        
     });
     // scraping logic comes here…
     const page = await browser.newPage();
