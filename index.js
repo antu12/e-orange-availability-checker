@@ -61,7 +61,6 @@ let pulsarSD = new Promise(async (resolve, reject) => {
     let quotes = await page.evaluate(() => {
 
         let result = {};
-
         let data = [];
         let elements = document.getElementsByClassName('productDetails-status');
         for (var element of elements)
