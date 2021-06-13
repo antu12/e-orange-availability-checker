@@ -13,9 +13,9 @@ app.get('/get_pulsar', (req, res) => {
     res.sendStatus(200);
 });
 
-cron.schedule('*/15 * * * *', () => {
+cron.schedule('*/10 * * * *', () => {
     const scrapper = require('./index');
-    console.log('running /get_pulsar task every 15 minutes');
+    console.log('running /get_pulsar task every 10 minutes');
 });
 
 app.listen(port, () => {
