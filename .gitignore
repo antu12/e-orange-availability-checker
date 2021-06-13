@@ -1,3 +1,5 @@
 .env
 node_modules
 pl-scraper.js
+.deployment
+settings.json
