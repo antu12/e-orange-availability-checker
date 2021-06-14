@@ -21,7 +21,7 @@ let getStatus = (link) => {
         try {
             const browser = await puppeteer.launch({
                 headless: true,
-                ignoreDefaultArgs: ['--disable-extensions']
+                args: ['--no-sandbox','--disable-setuid-sandbox']
             });
             // scraping logic comes here…
             const page = await browser.newPage();
