@@ -97,5 +97,5 @@ Promise.all(
         }
     });
 }).catch(err => {
-
+    throw err;
 });
