@@ -4,6 +4,7 @@ const puppeteer = require('puppeteer');
 const async = require('async');
 const sgMail = require('@sendgrid/mail');
 const winston = require('winston');
+const { chromium } = require("playwright-chromium");
 const logger = winston.createLogger({
     transports: [
         new winston.transports.Console()
@@ -19,7 +20,7 @@ const links = ['https://www.eorange.shop/product/18320/bajaj-pulsar-150-cc-twin-
 let getStatus = (link) => {
     return new Promise(async (resolve, reject) => {
         try {
-            const browser = await puppeteer.launch({
+            const browser = await chromium.launch({
                 headless: true,
                 args: ['--no-sandbox','--disable-setuid-sandbox']
             });
