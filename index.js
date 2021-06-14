@@ -20,7 +20,8 @@ let getStatus = (link) => {
     return new Promise(async (resolve, reject) => {
         try {
             const browser = await puppeteer.launch({
-                headless: true
+                headless: true,
+                ignoreDefaultArgs: ['--disable-extensions']
             });
             // scraping logic comes here…
             const page = await browser.newPage();
