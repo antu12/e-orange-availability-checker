@@ -1,5 +1,8 @@
 .env
 node_modules
 pl-scraper.js
+sc.js
+gmail.js
+*.json
 .deployment
 settings.json
